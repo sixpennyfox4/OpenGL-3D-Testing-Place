@@ -7,7 +7,6 @@ Texture::Texture(const char* image, GLenum texType, GLuint slot, GLenum interpol
 	stbi_set_flip_vertically_on_load(true);
 	unsigned char* bytes{ stbi_load(image, &widthImg, &heightImg, &numColCh, 0) };
 
-	GLuint texture;
 	glGenTextures(1, &ID);
 	glActiveTexture(GL_TEXTURE0 + slot);
 	unit = slot;
